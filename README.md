@@ -1,1 +1,2 @@
 # Tip-Calculator
+We are seeing the future guys!! The lastest and greatest from me. The tip calculator!! LoL! nah jk! just built a simple template Urihel Verison for the tip calculator. The JavaScript has to main functions one that calculates the tip based of the bill amount and tip percentage, and the second is taking the value from the tip during the first calculation and using it again to divide by the number of friends or family you went to dine with and are seeking to split the tip. The html document is mainly comprised of divs which i used to lay my text box inputs. 
