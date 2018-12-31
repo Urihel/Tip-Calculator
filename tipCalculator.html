@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <style>
+        /*Google Font Style Ubuntu file import*/
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu:300');
+        @import url('https://fonts.googleapis.com/css?family=Titillium+Web:300');
+
+        /*css organzied by selector*/
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+        span {
+            /*border: 2px solid black;*/
+            color: black;
+            float:left;
+            font-size: 30px;
+            margin-left: 100px;
+        }
+        /*css ogranized by class reference*/
+        .title {
+            /*border: 2px solid black;*/
+            color: white;
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 28px;
+            text-align: center;
+            
+        }
+
+        .billBorder {
+            /*border: 2px solid black;*/
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .tipBorder {
+            /*border: 2px solid black;*/
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btnBorder {
+            /*border: 2px solid black;*/
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .tipTextBorder {
+            /*border: 2px solid black;*/
+            margin-top: 20px;
+            text-align: center;
+        }
+        .guestBorder {
+            /*border: 2px solid black;*/
+            margin-top: 20px;
+            text-align: center;
+        }
+        .newTabBorder {
+            /*border: 2px solid black;*/
+            margin-top: 20px;
+            text-align: center;
+        }
+        /*css organized by id reference*/
+
+        #container {
+            background-color: #49AFFF;
+            border: 2px solid #A4D5FC;
+            border-radius: 9px;
+            margin: 0 auto;
+            width: 600px;
+        }
+
+        #bill {
+            /*border: 2px solid black;*/
+            border-radius: 9px;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 20px;
+            height: 30px;
+            text-align: center;
+        }
+
+        #tip {
+            /*border: 2px solid black;*/
+            border-radius: 9px;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 20px;
+            height: 30px;
+            text-align: center;
+        }
+
+        #btn {
+            border-radius: 9px;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 20px;
+            height: 35px;
+            width: 100px;
+        }
+
+        #textTipTotal {
+            background-color: white;
+            border: 2px outset #EAEAEA;
+            border-radius: 9px;
+            color: gray;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 20px;
+            height: 30px;
+            margin: 0 auto;
+            padding-top: 5px;
+            width: 250px;
+        }
+        #guest {
+            /*border: 2px solid black;*/
+            border-radius: 9px;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 20px;
+            height: 30px;
+            text-align: center;
+        }
+        #newTab {
+            background-color: white;
+            border: 2px outset #EAEAEA;
+            border-radius: 9px;
+            color: gray;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 20px;
+            height: 30px;
+            margin: 0 auto;
+            padding-top: 5px;
+            width: 250px;
+        }
+       
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+
+
+        <div class="title"> <!--<span><i class="fas fa-bars"></i></span>--> Tip Calculator</div>
+
+        <div class="billBorder">
+            Bill Amount: <input type="text" id="bill" placeholder="Enter Bill Here" />
+        </div>
+
+        <div class="tipBorder">
+            Tip Percentage: <input type="text" id="tip" placeholder="Enter % Here" />
+        </div>
+
+        <div class="btnBorder">
+            <button id="btn">Calculate</button>
+        </div>
+
+        <div class="tipTextBorder">
+            <div id="textTipTotal">Total Tip Amount</div>
+        </div>
+
+        <div class="guestBorder">
+            Let's Split The Tab: <input type="text" id="guest" placeholder="Friends/Family" />
+        </div>
+        <!--Where we want to friends tab to appear-->
+        <div class="newTabBorder">
+            <div id="newTab">Each Pay</div>
+        </div>
+
+    </div>
+
+    <script>
+        var newTab = document.getElementById("newTab");
+
+        var btn = document.getElementById("btn");
+        var textTipTotal = document.getElementById("textTipTotal");
+       
+
+        // Function that Calculates Your Bill * Tip% and displays that for you
+        function calcGratitude() {
+            
+            btn.addEventListener("click", function () {
+                var billAmount = document.getElementById("bill");
+                var tipPercent = document.getElementById("tip");
+                //**********************************
+                b = billAmount.value;
+                console.log(b + " is the dollar value of meal");
+                tp = tipPercent.value;
+                console.log(tp + " is the tip percentage");
+                total = Math.round(b * tp) / 100;
+                console.log(total + " is the total tip amount");
+                //What will display as InnerText in the textTipTotal div element
+                textTipTotal.innerText = "$" + parseFloat(total).toFixed(2);
+                return total;
+            }); 
+            
+        }
+        calcGratitude();
+        //Function that allows you to obtain the current tip amount and divide it between guests.
+        function splitTheTab() {
+            
+            btn.addEventListener("click", function () {
+                var guest = document.getElementById("guest").value;
+                console.log(guest + " is the number of friends/family you split the tips with");
+                newTab.innerText = "$" + parseFloat(Math.round(total).toFixed(2)) / guest;
+                console.log( newTab.innerText + " is the new split tab");
+            });
+        }
+        splitTheTab();
+
+
+
+    </script>
+</body>
+</html>
