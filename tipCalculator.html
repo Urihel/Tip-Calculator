@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -64,12 +64,17 @@
             margin-top: 20px;
             text-align: center;
         }
+        .cal2button {
+            margin-top: 20px;
+            text-align: center;
+        }
         /*css organized by id reference*/
 
         #container {
             background-color: #49AFFF;
             border: 2px solid #A4D5FC;
             border-radius: 9px;
+            height: 500px;
             margin: 0 auto;
             width: 600px;
         }
@@ -132,6 +137,13 @@
             padding-top: 5px;
             width: 250px;
         }
+        #calc2 {
+            border-radius: 9px;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 20px;
+            height: 35px;
+            width: 100px;
+        }
        
 
 
@@ -168,12 +180,15 @@
         <div class="newTabBorder">
             <div id="newTab">Each Pay</div>
         </div>
+        <div class="cal2button">
+            <button id="calc2">Calculate</button>
+        </div>
 
     </div>
 
     <script>
+        var btn2 = document.getElementById("calc2");
         var newTab = document.getElementById("newTab");
-
         var btn = document.getElementById("btn");
         var textTipTotal = document.getElementById("textTipTotal");
        
@@ -201,7 +216,7 @@
         //Function that allows you to obtain the current tip amount and divide it between guests.
         function splitTheTab() {
             
-            btn.addEventListener("click", function () {
+            btn2.addEventListener("click", function () {
                 var guest = document.getElementById("guest").value;
                 console.log(guest + " is the number of friends/family you split the tips with");
                 newTab.innerText = "$" + parseFloat(Math.round(total).toFixed(2)) / guest;
