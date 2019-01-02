@@ -1,2 +1,7 @@
 # Tip-Calculator
-We are seeing the future guys!! The lastest and greatest from me. The tip calculator!! LoL! nah jk! just built a simple template Urihel Verison for the tip calculator. The JavaScript has to main functions one that calculates the tip based of the bill amount and tip percentage, and the second is taking the value from the tip during the first calculation and using it again to divide by the number of friends or family you went to dine with and are seeking to split the tip. The html document is mainly comprised of divs which i used to lay my input text boxes in. There are still minor details that needs to be implemented. Im still getting this infinity messages on the split the tab, but that is due to the fact that im testing against first button but under a new click function.
+Hi everyone! This here is a tip calculator which i built using HTML5, CSS3, & javaScript. The way you use as of right now is real simple. 
+1. Inside the first Input text box type in your restaurants Bill Amount. You can use pretax bill amount  or taxed bill amount.
+2. Insde the second input text box type a whole number which we'll use as the tip percentage. note: no percentage sign necessary the code in the program at this point does not use or recognized percent symbols. 
+3. hit the calculate button and it will show you in the third box how much in tips do you owe. 
+4. if you want to split to the tips tab between friends and family just enter a numerical amount in the friends/family input text box. 
+5. the second button will display the final tips broken between friends. 
