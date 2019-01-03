@@ -1,5 +1,5 @@
 # Tip-Calculator
-Hi everyone! This here is a tip calculator which i built using HTML5, CSS3, & javaScript. The way you use as of right now is real simple.
+Hi everyone! This here is a tip calculator which i built using HTML5, CSS3, & raw javaScript. The way you use as of right now is real simple.
 
 1. Inside the first Input text box type in your Restaurants Bill Amount. You can use pretax amount  or taxed amount.
 
